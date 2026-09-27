@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Florida Rippers</title>
+<style>
+  :root {
+    --bg: #0a0014;
+    --neon-pink: #ff2ed3;
+    --neon-cyan: #00f0ff;
+    --neon-orange: #ff7a00;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: radial-gradient(circle at 50% 30%, #1a0033 0%, var(--bg) 70%);
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    overflow: hidden;
+  }
+  .scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .quad {
+    font-size: clamp(4rem, 18vw, 8rem);
+    animation: rip 0.9s linear infinite, wobble 2.4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px var(--neon-cyan));
+  }
+  @keyframes rip {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes wobble {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-18px); }
+  }
+  h1 {
+    font-size: clamp(1.4rem, 5vw, 2.4rem);
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink), var(--neon-orange));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 3s linear infinite;
+  }
+  @keyframes shine {
+    to { background-position: 200% center; }
+  }
+  p {
+    color: #9a8cc9;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <div class="scene">
+    <div class="quad">🛸</div>
+    <h1>South Florida Rippers</h1>
+    <p>real site loading... eventually.</p>
+  </div>
+</body>
+</html>
